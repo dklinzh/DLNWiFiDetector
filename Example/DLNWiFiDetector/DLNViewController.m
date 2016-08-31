@@ -7,23 +7,51 @@
 //
 
 #import "DLNViewController.h"
+#import <DLNWiFiDetector/DLNWiFiDetector.h>
 
-@interface DLNViewController ()
+@interface DLNViewController () <DLNWiFiDetectorDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *hostLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ipLabel;
+@property (weak, nonatomic) IBOutlet UILabel *macLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *searchIndicator;
 
+@property (nonatomic, strong) DLNWiFiDetector *detector;
 @end
 
 @implementation DLNViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    self.detector = [[DLNWiFiDetector alloc] init];
+    
+    NSString *ip = [self.detector getOwnIp];
+    self.ipLabel.text = [NSString stringWithFormat:@"IP: %@", ip];
+    
+    NSString *host = [self.detector searchHostByIp:ip];
+    self.hostLabel.text = [NSString stringWithFormat:@"HOST: %@", host];
+    
+    self.macLabel.text = @"MAC: searching...";
+    [self.searchIndicator startAnimating];
+    __weak __typeof(self)weakSelf = self;
+    [self.detector searchMacOnResult:^(NSString *mac) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        strongSelf.macLabel.text = [NSString stringWithFormat:@"MAC: %@", mac];
+        [strongSelf.searchIndicator stopAnimating];
+    }];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - DLNWiFiDetectorDelegate
+- (void)wifiDetectorSearchOutIP:(NSString *)ip withHost:(NSString *)host {
+    NSLog(@"%s, ip: %@, host: %@", __FUNCTION__, ip, host);
+}
+
+- (void)wifiDetectorSearchFinished {
+    NSLog(@"%s", __FUNCTION__);
+}
 @end

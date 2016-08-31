@@ -1,4 +1,8 @@
-use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+
+#platform :ios, '7.0'
+#warning: embedded dylibs/frameworks only run on iOS 8 or later
+#use_frameworks!
 
 target 'DLNWiFiDetector_Example' do
   pod 'DLNWiFiDetector', :path => '../'
@@ -8,7 +12,7 @@ target 'DLNWiFiDetector_Example' do
 
     pod 'Specta'
   pod 'Expecta'
-  pod 'FBSnapshotTestCase'
+  pod 'FBSnapshotTestCase/Core'
   pod 'Expecta+Snapshots'
   end
 end

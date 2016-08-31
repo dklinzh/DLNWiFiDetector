@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		017981A1E962CE6E0DDF2691 /* Pods_DLNWiFiDetector_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42E45E567B3113F4D9A2104 /* Pods_DLNWiFiDetector_Tests.framework */; };
+		11E0F39AA3A273BE9ADDE0B9 /* libPods-DLNWiFiDetector_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1B2A6FF3B70B5E60B54868 /* libPods-DLNWiFiDetector_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,8 +21,9 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6E1C241AD4D302FFCA114F49 /* libPods-DLNWiFiDetector_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E5CAD7873C079CC1E3DFCE /* libPods-DLNWiFiDetector_Tests.a */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		EB44D96FB3DBEDB89000A00D /* Pods_DLNWiFiDetector_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8748C5FFAA9E2A1E079CFCE5 /* Pods_DLNWiFiDetector_Example.framework */; };
+		C2E09DA31D6D994C00556897 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E09DA21D6D994C00556897 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23E5CAD7873C079CC1E3DFCE /* libPods-DLNWiFiDetector_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DLNWiFiDetector_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4AB2D2DA2E201CCC87E3A5 /* Pods-DLNWiFiDetector_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLNWiFiDetector_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DLNWiFiDetector_Tests/Pods-DLNWiFiDetector_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5275702D2762571C53E870E4 /* Pods-DLNWiFiDetector_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLNWiFiDetector_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLNWiFiDetector_Tests/Pods-DLNWiFiDetector_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DLNWiFiDetector_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLNWiFiDetector_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,8 +61,8 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		865B5C87DDEF9FE70348D34E /* DLNWiFiDetector.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DLNWiFiDetector.podspec; path = ../DLNWiFiDetector.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		8748C5FFAA9E2A1E079CFCE5 /* Pods_DLNWiFiDetector_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLNWiFiDetector_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C42E45E567B3113F4D9A2104 /* Pods_DLNWiFiDetector_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLNWiFiDetector_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E09DA21D6D994C00556897 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CA1B2A6FF3B70B5E60B54868 /* libPods-DLNWiFiDetector_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DLNWiFiDetector_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D579BF552EC6D2D26D19029F /* Pods-DLNWiFiDetector_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLNWiFiDetector_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DLNWiFiDetector_Example/Pods-DLNWiFiDetector_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D73140FA2B1CA6F1D05AFAF8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E0E42DB296900EF86188E2D5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				EB44D96FB3DBEDB89000A00D /* Pods_DLNWiFiDetector_Example.framework in Frameworks */,
+				11E0F39AA3A273BE9ADDE0B9 /* libPods-DLNWiFiDetector_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				017981A1E962CE6E0DDF2691 /* Pods_DLNWiFiDetector_Tests.framework in Frameworks */,
+				6E1C241AD4D302FFCA114F49 /* libPods-DLNWiFiDetector_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +123,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				8748C5FFAA9E2A1E079CFCE5 /* Pods_DLNWiFiDetector_Example.framework */,
-				C42E45E567B3113F4D9A2104 /* Pods_DLNWiFiDetector_Tests.framework */,
+				CA1B2A6FF3B70B5E60B54868 /* libPods-DLNWiFiDetector_Example.a */,
+				23E5CAD7873C079CC1E3DFCE /* libPods-DLNWiFiDetector_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,11 +134,12 @@
 			children = (
 				6003F59C195388D20070C39A /* DLNAppDelegate.h */,
 				6003F59D195388D20070C39A /* DLNAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* DLNViewController.h */,
 				6003F5A6195388D20070C39A /* DLNViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				C2E09DA21D6D994C00556897 /* Launch Screen.storyboard */,
 			);
 			name = "Example for DLNWiFiDetector";
 			path = DLNWiFiDetector;
@@ -278,6 +281,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				C2E09DA31D6D994C00556897 /* Launch Screen.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,7 +471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -517,7 +521,7 @@
 				GCC_PREFIX_HEADER = "DLNWiFiDetector/DLNWiFiDetector-Prefix.pch";
 				INFOPLIST_FILE = "DLNWiFiDetector/DLNWiFiDetector-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dklinzh.DLNWiFiDetector-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -533,7 +537,7 @@
 				GCC_PREFIX_HEADER = "DLNWiFiDetector/DLNWiFiDetector-Prefix.pch";
 				INFOPLIST_FILE = "DLNWiFiDetector/DLNWiFiDetector-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dklinzh.DLNWiFiDetector-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

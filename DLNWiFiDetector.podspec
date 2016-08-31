@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'DLNWiFiDetector'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of DLNWiFiDetector.'
+  s.summary          = 'WiFi scanning for iOS devices.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -28,10 +28,19 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/DLNWiFiDetector.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source_files = 'DLNWiFiDetector/Classes/**/*'
-  
+
+  s.requires_arc = true
+
+  non_arc_files = 'DLNWiFiDetector/Classes/SimplePing.*'
+  s.exclude_files = non_arc_files
+  s.subspec 'non-arc' do |sna|
+    sna.requires_arc = false
+    sna.source_files = non_arc_files
+  end
+
   # s.resource_bundles = {
   #   'DLNWiFiDetector' => ['DLNWiFiDetector/Assets/*.png']
   # }

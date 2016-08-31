@@ -1,0 +1,33 @@
+PODS:
+  - DLNWiFiDetector (0.1.0):
+    - DLNWiFiDetector/non-arc (= 0.1.0)
+  - DLNWiFiDetector/non-arc (0.1.0)
+  - Expecta (1.0.5)
+  - Expecta+Snapshots (3.0.0):
+    - Expecta (~> 1.0)
+    - FBSnapshotTestCase/Core (~> 2.0)
+    - Specta (~> 1.0)
+  - FBSnapshotTestCase/Core (2.1.2)
+  - Specta (1.0.5)
+
+DEPENDENCIES:
+  - DLNWiFiDetector (from `../`)
+  - Expecta
+  - Expecta+Snapshots
+  - FBSnapshotTestCase/Core
+  - Specta
+
+EXTERNAL SOURCES:
+  DLNWiFiDetector:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DLNWiFiDetector: 7a8279fd0f6928dd02218b7608dfa99ac8380494
+  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
+  Expecta+Snapshots: c343f410c7a6392f3e22e78f94c44b6c0749a516
+  FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
+  Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
+
+PODFILE CHECKSUM: 16f189f006b55001c465fe6d105edeffb6b1eaef
+
+COCOAPODS: 1.0.1
