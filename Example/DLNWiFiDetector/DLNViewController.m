@@ -25,12 +25,6 @@
 	
     self.detector = [[DLNWiFiDetector alloc] init];
     
-    NSString *ip = [self.detector getOwnIp];
-    self.ipLabel.text = [NSString stringWithFormat:@"IP: %@", ip];
-    
-    NSString *host = [self.detector searchHostByIp:ip];
-    self.hostLabel.text = [NSString stringWithFormat:@"HOST: %@", host];
-    
     self.macLabel.text = @"MAC: searching...";
     [self.searchIndicator startAnimating];
     __weak __typeof(self)weakSelf = self;
@@ -39,6 +33,12 @@
         strongSelf.macLabel.text = [NSString stringWithFormat:@"MAC: %@", mac];
         [strongSelf.searchIndicator stopAnimating];
     }];
+    
+    NSString *ip = [self.detector getOwnIp];
+    self.ipLabel.text = [NSString stringWithFormat:@"IP: %@", ip];
+    
+    NSString *host = [self.detector searchHostByIp:ip];
+    self.hostLabel.text = [NSString stringWithFormat:@"HOST: %@", host];
 }
 
 - (void)didReceiveMemoryWarning {

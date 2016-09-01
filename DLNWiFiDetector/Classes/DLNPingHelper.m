@@ -44,7 +44,7 @@
 }
 
 - (void)simplePing:(SimplePing *)pinger didReceivePingResponsePacket:(NSData *)packet {
-    [self stopPingInResult:NO];
+    [self stopPingInResult:YES];
 }
 
 - (void)simplePing:(SimplePing *)pinger didFailWithError:(NSError *)error {
@@ -52,6 +52,6 @@
 }
 
 - (void)simplePing:(SimplePing *)pinger didFailToSendPacket:(NSData *)packet error:(NSError *)error {
-    [self stopPingInResult:YES];
+    [self stopPingInResult:NO];
 }
 @end

@@ -61,7 +61,6 @@
 }
 
 - (void)wifiDetectorSearchFinished {
-    NSLog(@"%s %@", __FUNCTION__, [NSThread currentThread]);
     NSString *mac = [self searchMacByIp:[self getOwnIp]];
     if (self.searchResultBlock) {
         self.searchResultBlock(mac);
@@ -74,10 +73,7 @@
     self.searchResultBlock = block;
     
     self.delegate = self;
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSLog(@"%s %@", __FUNCTION__, [NSThread currentThread]);
-        [self startScanning];
-//    });
+    [self startScanning];
 }
 
 - (void)startScanning {
@@ -125,10 +121,11 @@
             if ([strongSelf.delegate respondsToSelector:@selector(wifiDetectorSearchOutIP:withHost:)]) {
                 [strongSelf.delegate wifiDetectorSearchOutIP:ip withHost:host];
             }
-            if (strongSelf.timerCount + strongSelf.baseAddressEnd >= 254) {
-                if ([strongSelf.delegate respondsToSelector:@selector(wifiDetectorSearchFinished)]) {
-                    [strongSelf.delegate wifiDetectorSearchFinished];
-                }
+        }
+
+        if (strongSelf.timerCount + strongSelf.baseAddressEnd >= 254) {
+            if ([strongSelf.delegate respondsToSelector:@selector(wifiDetectorSearchFinished)]) {
+                [strongSelf.delegate wifiDetectorSearchFinished];
             }
         }
     }];
@@ -147,7 +144,6 @@
     
     error = getaddrinfo(ipAddress, NULL, NULL, &results);
     if (error != 0) {
-        NSLog (@"can not get any info of the ip address");
         return nil;
     }
     
@@ -170,7 +166,6 @@
 - (NSString *)searchMacByIp:(NSString *)ip {
     NSString *ret = nil;
     in_addr_t addr = inet_addr(ip.UTF8String);
-    NSLog(@"addr: %u", addr);
     
     size_t needed;
     char *buf, *next;
@@ -321,7 +316,7 @@
     // Free memory
     freeifaddrs(interfaces);
     
-    NSLog(@"Self IP: %@", address);
+    NSLog(@"Own IP: %@", address);
     return address;
 }
 
