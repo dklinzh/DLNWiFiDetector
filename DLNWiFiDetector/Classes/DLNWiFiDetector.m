@@ -72,6 +72,14 @@
 - (void)searchMacOnResult:(DLNSearchResultBlock)block {
     self.searchResultBlock = block;
     
+    NSString *mac = [self searchMacByIp:[self getOwnIp]];
+    if (mac) {
+        if (self.searchResultBlock) {
+            self.searchResultBlock(mac);
+        }
+        return;
+    }
+    
     self.delegate = self;
     [self startScanning];
 }
