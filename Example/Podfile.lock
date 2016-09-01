@@ -1,7 +1,5 @@
 PODS:
-  - DLNWiFiDetector (0.1.0):
-    - DLNWiFiDetector/non-arc (= 0.1.0)
-  - DLNWiFiDetector/non-arc (0.1.0)
+  - DLNWiFiDetector (0.2.0)
   - Expecta (1.0.5)
   - Expecta+Snapshots (3.0.0):
     - Expecta (~> 1.0)
@@ -22,7 +20,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DLNWiFiDetector: 7a8279fd0f6928dd02218b7608dfa99ac8380494
+  DLNWiFiDetector: 6039c445e83f5e48f6c47457fcc53fd3ac0a1582
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Expecta+Snapshots: c343f410c7a6392f3e22e78f94c44b6c0749a516
   FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b

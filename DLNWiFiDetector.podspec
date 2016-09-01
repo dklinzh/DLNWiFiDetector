@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DLNWiFiDetector'
-  s.version          = '0.1.1'
+  s.version          = '0.2.0'
   s.summary          = 'WiFi scanning for iOS devices.'
 
 # This description is used to generate tags and improve search results.
@@ -34,12 +34,12 @@ TODO: Add long description of the pod here.
 
   s.requires_arc = true
 
-  non_arc_files = 'DLNWiFiDetector/Classes/SimplePing.*'
-  s.exclude_files = non_arc_files
-  s.subspec 'non-arc' do |sna|
-    sna.requires_arc = false
-    sna.source_files = non_arc_files
-  end
+#  non_arc_files = 'DLNWiFiDetector/Classes/SimplePing.*'
+#  s.exclude_files = non_arc_files
+#  s.subspec 'non-arc' do |sna|
+#    sna.requires_arc = false
+#    sna.source_files = non_arc_files
+#  end
 
   # s.resource_bundles = {
   #   'DLNWiFiDetector' => ['DLNWiFiDetector/Assets/*.png']

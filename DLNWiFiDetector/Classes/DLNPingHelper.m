@@ -20,8 +20,9 @@
 - (void)pingAddress:(NSString *)address onResult:(DLNPingResultBlock)block {
     self.pingResultBlock = block;
     
-    self.simplePing = [SimplePing simplePingWithHostName:address];
+    self.simplePing = [[SimplePing alloc] initWithHostName:address];
     self.simplePing.delegate = self;
+//    self.simplePing.addressStyle = SimplePingAddressStyleAny;
     [self.simplePing start];
     
     [self performSelector:@selector(stopPingInResult:) withObject:@(NO) afterDelay:1]; //ping timeout
@@ -43,15 +44,23 @@
     [self.simplePing sendPingWithData:nil];
 }
 
-- (void)simplePing:(SimplePing *)pinger didReceivePingResponsePacket:(NSData *)packet {
-    [self stopPingInResult:YES];
+- (void)simplePing:(SimplePing *)pinger didSendPacket:(NSData *)packet sequenceNumber:(uint16_t)sequenceNumber {
+    
 }
 
-- (void)simplePing:(SimplePing *)pinger didFailWithError:(NSError *)error {
+- (void)simplePing:(SimplePing *)pinger didFailToSendPacket:(NSData *)packet sequenceNumber:(uint16_t)sequenceNumber error:(NSError *)error {
     [self stopPingInResult:NO];
 }
 
-- (void)simplePing:(SimplePing *)pinger didFailToSendPacket:(NSData *)packet error:(NSError *)error {
+- (void)simplePing:(SimplePing *)pinger didReceivePingResponsePacket:(nonnull NSData *)packet sequenceNumber:(uint16_t)sequenceNumber {
+    [self stopPingInResult:YES];
+}
+
+- (void)simplePing:(SimplePing *)pinger didReceiveUnexpectedPacket:(NSData *)packet {
+    [self stopPingInResult:NO];
+}
+
+- (void)simplePing:(SimplePing *)pinger didFailWithError:(NSError *)error {
     [self stopPingInResult:NO];
 }
 @end
