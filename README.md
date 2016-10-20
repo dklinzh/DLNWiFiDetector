@@ -17,12 +17,12 @@ DLNWiFiDetector is available through [CocoaPods](http://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "DLNWiFiDetector"
+pod 'DLNWiFiDetector', :git => 'https://github.com/dklinzh/DLNWiFiDetector.git'
 ```
 
 ## Author
 
-Daniel, linzhdk@gmail.com
+Daniel Lin, linzhdk@gmail.com
 
 ## License
 
